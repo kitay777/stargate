@@ -1,0 +1,281 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "Param21",
+			"GroupId": "ParamGroup2",
+			"Name": "pose1"
+		},
+		{
+			"Id": "Param22",
+			"GroupId": "ParamGroup2",
+			"Name": "pose2"
+		},
+		{
+			"Id": "Param23",
+			"GroupId": "ParamGroup2",
+			"Name": "1"
+		},
+		{
+			"Id": "Param24",
+			"GroupId": "ParamGroup2",
+			"Name": "2"
+		},
+		{
+			"Id": "Param25",
+			"GroupId": "ParamGroup2",
+			"Name": "3"
+		},
+		{
+			"Id": "Param26",
+			"GroupId": "ParamGroup2",
+			"Name": "4"
+		},
+		{
+			"Id": "Param",
+			"GroupId": "ParamGroup",
+			"Name": "dress"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "ParamGroup",
+			"Name": "army"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "ParamGroup",
+			"Name": "army2"
+		},
+		{
+			"Id": "Param4",
+			"GroupId": "ParamGroup",
+			"Name": "armz"
+		},
+		{
+			"Id": "Param5",
+			"GroupId": "ParamGroup",
+			"Name": "armz2"
+		},
+		{
+			"Id": "Param6",
+			"GroupId": "ParamGroup",
+			"Name": "starx"
+		},
+		{
+			"Id": "Param7",
+			"GroupId": "ParamGroup",
+			"Name": "stary"
+		},
+		{
+			"Id": "Param8",
+			"GroupId": "ParamGroup",
+			"Name": "光"
+		},
+		{
+			"Id": "Param9",
+			"GroupId": "ParamGroup",
+			"Name": "光2"
+		},
+		{
+			"Id": "Param10",
+			"GroupId": "ParamGroup",
+			"Name": "cry"
+		},
+		{
+			"Id": "Param11",
+			"GroupId": "ParamGroup",
+			"Name": "cry2"
+		},
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "角度 X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "角度 Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "",
+			"Name": "角度 Z"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "",
+			"Name": "左目　開閉"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "",
+			"Name": "笑颜左"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "",
+			"Name": "右目　開閉"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "",
+			"Name": "笑颜右"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"GroupId": "",
+			"Name": "目玉 X"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"GroupId": "",
+			"Name": "目玉 Y"
+		},
+		{
+			"Id": "ParamBrowLY",
+			"GroupId": "",
+			"Name": "左眉上下"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "",
+			"Name": "右眉　上下"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"GroupId": "",
+			"Name": "口　変形"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "",
+			"Name": "口　開閉"
+		},
+		{
+			"Id": "ParamBodyAngleX",
+			"GroupId": "",
+			"Name": "体X"
+		},
+		{
+			"Id": "ParamBodyAngleY",
+			"GroupId": "",
+			"Name": "体Y"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"GroupId": "",
+			"Name": "体Z"
+		},
+		{
+			"Id": "ParamBreath",
+			"GroupId": "",
+			"Name": "呼吸"
+		}
+	],
+	"ParameterGroups": [
+		{
+			"Id": "ParamGroup2",
+			"GroupId": "",
+			"Name": "A"
+		},
+		{
+			"Id": "ParamGroup",
+			"GroupId": "",
+			"Name": "P"
+		}
+	],
+	"Parts": [
+		{
+			"Id": "Part",
+			"Name": "目　光"
+		},
+		{
+			"Id": "Part2",
+			"Name": "前髪 R"
+		},
+		{
+			"Id": "Part3",
+			"Name": "前髪L"
+		},
+		{
+			"Id": "Part4",
+			"Name": "泣く"
+		},
+		{
+			"Id": "Part20",
+			"Name": "丸"
+		},
+		{
+			"Id": "X",
+			"Name": "X"
+		},
+		{
+			"Id": "Part5",
+			"Name": "怒る"
+		},
+		{
+			"Id": "Part6",
+			"Name": "目"
+		},
+		{
+			"Id": "Part7",
+			"Name": "ポーズ２↓"
+		},
+		{
+			"Id": "Part8",
+			"Name": "体"
+		},
+		{
+			"Id": "Part14",
+			"Name": "R腕"
+		},
+		{
+			"Id": "Part13",
+			"Name": "hi　ポーズ"
+		},
+		{
+			"Id": "Part15",
+			"Name": "L腕"
+		},
+		{
+			"Id": "Part16",
+			"Name": "ポーズ２↑"
+		},
+		{
+			"Id": "Part9",
+			"Name": "光R"
+		},
+		{
+			"Id": "Part10",
+			"Name": "光L"
+		},
+		{
+			"Id": "Part11",
+			"Name": "↑"
+		},
+		{
+			"Id": "Part17",
+			"Name": "R脚"
+		},
+		{
+			"Id": "Part18",
+			"Name": "L脚"
+		},
+		{
+			"Id": "Part19",
+			"Name": "スカート"
+		},
+		{
+			"Id": "R",
+			"Name": "R"
+		},
+		{
+			"Id": "L",
+			"Name": "L"
+		},
+		{
+			"Id": "Part12",
+			"Name": "首"
+		}
+	]
+}

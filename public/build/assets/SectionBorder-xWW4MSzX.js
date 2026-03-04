@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{l as s,g as t,j as r}from"./runtime-dom.esm-bundler-DxwDjKa9.js";const c={},n={class:"hidden sm:block"};function a(d,e){return s(),t("div",n,[...e[0]||(e[0]=[r("div",{class:"py-8"},[r("div",{class:"border-t border-gray-200"})],-1)])])}const l=o(c,[["render",a]]);export{l as S};

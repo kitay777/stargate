@@ -1,0 +1,82 @@
+<script setup>
+import AppLayout from '@/Layouts/AppLayout.vue'
+import { Head, useForm } from '@inertiajs/vue3'
+import { ref } from 'vue'
+
+const props = defineProps({
+  products: Array,
+  allUsers: Array,
+})
+
+const selectedUser = ref(null)
+
+const form = useForm({
+  product_id: null,
+  user_id: null,
+})
+
+const addSeller = (productId) => {
+  if (!selectedUser.value) return alert('ユーザーを選択してください')
+  form.product_id = productId
+  form.user_id = selectedUser.value
+  form.post(`/products/${productId}/sellers`, {
+    preserveScroll: true,
+    onSuccess: () => {
+      selectedUser.value = null
+    },
+  })
+}
+
+const removeSeller = (productId, userId) => {
+  if (!confirm('このユーザーを販売者から削除しますか？')) return
+  form.delete(`/products/${productId}/sellers/${userId}`, {
+    preserveScroll: true,
+  })
+}
+</script>
+
+<template>
+  <AppLayout title="販売者管理">
+    <Head title="販売者管理" />
+    <div class="max-w-4xl mx-auto p-6 text-white">
+      <h1 class="text-2xl font-bold mb-6">販売者管理</h1>
+
+      <div v-for="product in props.products" :key="product.id" class="mb-6 p-4 bg-gray-800 rounded">
+        <h2 class="text-xl font-semibold">🛒 {{ product.name }}</h2>
+        <p class="text-sm text-gray-400 mb-2">現在の販売者:</p>
+        <ul class="list-disc ml-6 mb-2">
+          <li v-for="seller in product.sellers" :key="seller.id" class="flex justify-between items-center">
+            <span>{{ seller.name }}</span>
+            <button
+              class="text-sm bg-red-500 hover:bg-red-600 px-2 py-1 rounded"
+              @click="removeSeller(product.id, seller.id)"
+            >
+              ✕ 削除
+            </button>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+          <select v-model="selectedUser" class="text-black rounded px-2 py-1">
+            <option value="">ユーザー選択</option>
+            <option v-for="user in allUsers" :value="user.id" :key="user.id">
+              {{ user.name }}
+            </option>
+          </select>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded"
+            @click="addSeller(product.id)"
+          >
+            ➕ 追加
+          </button>
+        </div>
+      </div>
+    </div>
+  </AppLayout>
+</template>
+
+<style scoped>
+select {
+  min-width: 200px;
+}
+</style>

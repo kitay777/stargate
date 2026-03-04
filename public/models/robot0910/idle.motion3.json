@@ -1,0 +1,85 @@
+{
+  "Version": 3,
+  "Meta": {
+    "Duration": 0.25,
+    "Loop": true,
+    "CurveCount": 8,
+    "Fps": 30
+  },
+  "Curves": [
+    {
+      "Target": "Parameter",
+      "Id": "ParamAngleX",
+      "Segments": [
+        0,0,
+        0.0625,40,
+        0.125,-40,
+        0.1875,40,
+        0.25,-40
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamAngleY",
+      "Segments": [
+        0,0,
+        0.125,-20,
+        0.25,20
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamAngleZ",
+      "Segments": [
+        0,0,
+        0.125,15,
+        0.25,-15
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBodyAngleX",
+      "Segments": [
+        0,0,
+        0.125,-20,
+        0.25,20
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBodyAngleY",
+      "Segments": [
+        0,0,
+        0.125,15,
+        0.25,-15
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBreath",
+      "Segments": [
+        0,0.3,
+        0.125,2,
+        0.25,0.3
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamEyeBallX",
+      "Segments": [
+        0,0,
+        0.125,1.5,
+        0.25,-1.5
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamEyeBallY",
+      "Segments": [
+        0,0,
+        0.125,-1,
+        0.25,1
+      ]
+    }
+  ]
+}

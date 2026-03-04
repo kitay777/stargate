@@ -1,0 +1,8 @@
+app.001
+bootstrap/.DS_Store
+.DS_Store
+storage
+tests
+.env
+docker-compose.override.yml
+docker-compose.yml

@@ -1,0 +1,21 @@
+{
+    "chest": "4.joint_Torso2",
+    "head": "6.joint_Head",
+    "hips": "124.!Root",
+    "leftEye": "98.joint_be^ru_0_4",
+    "leftFoot": "65.joint_LeftFoot",
+    "leftHand": "21.joint_LeftWrist",
+    "leftLowerArm": "16.joint_LeftElbow",
+    "leftLowerLeg": "64.joint_LeftKnee",
+    "leftUpperArm": "11.joint_LeftArm",
+    "leftUpperLeg": "63.joint_LeftHip",
+    "neck": "5.joint_Neck",
+    "rightEye": "94.joint_be^ru_0_0",
+    "rightFoot": "69.joint_RightFoot",
+    "rightHand": "47.joint_RightWrist",
+    "rightLowerArm": "42.joint_RightElbow",
+    "rightLowerLeg": "68.joint_RightKnee",
+    "rightUpperArm": "37.joint_RightArm",
+    "rightUpperLeg": "67.joint_RightHip",
+    "spine": "3.joint_Torso"
+}
