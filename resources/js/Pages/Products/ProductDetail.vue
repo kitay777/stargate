@@ -182,13 +182,13 @@ async function handleAddToCart() {
   <AppLayout :title="product.name">
     <Head :title="product.name" />
 
-    <div class="max-w-4xl mx-auto p-4 text-black">
+    <div class="max-w-4xl mx-auto p-4 text-white">
 
       <!-- 🔹 戻るボタン -->
       <div class="mb-6">
         <Link
           href="/products/all"
-          class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-black font-bold py-2 px-6 rounded-full shadow-lg hover:scale-105 transform transition"
+          class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:scale-105 transform transition"
         >
           ← 戻る
         </Link>
@@ -234,22 +234,22 @@ async function handleAddToCart() {
       </div>
 
       <!-- 🔹 商品説明 -->
-      <div class="mt-2 whitespace-pre-line text-sm text-black mb-6">
+      <div class="mt-2 whitespace-pre-line text-sm text-white mb-6">
         {{ product.description }}
       </div>
 
       <!-- 🔹 金額 -->
-      <div class="text-right text-2xl font-bold text-black mb-6">
+      <div class="text-right text-2xl font-bold text-white mb-6">
         💰 {{ price.toLocaleString() }} 円
       </div>
       <!-- 🔹 残個数 -->
-      <div class="text-right text-sm text-black-300 mb-6">
+      <div class="text-right text-sm text-white-300 mb-6">
         📦 {{ remainingStock }} / {{ product.stock }} 個
       </div>
 
 
       <!-- 🔹 🔥 販売期間 -->
-      <div v-if="product.start_at && product.end_at" class="text-sm text-black-300 mb-2">
+      <div v-if="product.start_at && product.end_at" class="text-sm text-white-300 mb-2">
         📦 販売期間: {{ formatDateTime(product.start_at) }} ～ {{ formatDateTime(product.end_at) }}
       </div>
 
@@ -274,10 +274,10 @@ async function handleAddToCart() {
           </div>
         </template>
         <template v-else>
-          <div v-if="product.room" class="text-sm text-black-500">
+          <div v-if="product.room" class="text-sm text-white-500">
             📅 配信予定: {{ formatDate(product.room.start) }}
           </div>
-          <div v-else class="text-sm text-black-500">
+          <div v-else class="text-sm text-white-500">
             📴 配信なし
           </div>
         </template>
@@ -292,14 +292,14 @@ async function handleAddToCart() {
           :disabled="remainingStock <= 0"
           @click="handleAddToCart"
           class="font-bold py-2 px-6 rounded-full shadow transition"
-          :class="remainingStock > 0 ? 'bg-green-500 text-black hover:bg-green-600' : 'bg-gray-400 text-black cursor-not-allowed'"
+          :class="remainingStock > 0 ? 'bg-green-500 text-white hover:bg-green-600' : 'bg-gray-400 text-white cursor-not-allowed'"
         >
           {{ remainingStock > 0 ? '🛒 カートに追加' : '売り切れ' }}
         </button>
       </form>
 
       <!-- 🔐 未ログイン時：ログイン誘導 -->
-      <div v-else class="mt-6 text-black-300 text-sm">
+      <div v-else class="mt-6 text-white-300 text-sm">
         カートに追加するには
         <Link href="/login" class="underline hover:text-blue-400">ログイン</Link>
         が必要です。
@@ -309,7 +309,7 @@ async function handleAddToCart() {
       <form v-if="page.props.auth?.user" @submit.prevent="applyForSale" class="mt-6">
         <div class="mb-2">
           <label for="room" class="block text-sm mb-1">配信ルームを選択</label>
-          <select v-model="selectedRoomId" class="w-full rounded border px-2 py-1 text-black">
+          <select v-model="selectedRoomId" class="w-full rounded border px-2 py-1 text-white">
             <option disabled value="">選択してください</option>
             <option v-for="room in myRooms || []" :key="room.id" :value="room.id">
               {{ room.name }}（{{ formatDate(room.start) }}）
@@ -319,7 +319,7 @@ async function handleAddToCart() {
 
         <button
           type="submit"
-          class="bg-blue-500 text-black px-4 py-2 rounded hover:bg-blue-600"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           :disabled="!selectedRoomId"
         >
           💡 この配信で販売申請する
@@ -327,7 +327,7 @@ async function handleAddToCart() {
       </form>
 
       <!-- 🔐 未ログイン時：ログイン誘導 -->
-      <div v-else class="mt-6 text-black-300 text-sm">
+      <div v-else class="mt-6 text-white-300 text-sm">
         販売申請をするには
         <Link href="/login" class="underline hover:text-blue-400">ログイン</Link>
         が必要です。

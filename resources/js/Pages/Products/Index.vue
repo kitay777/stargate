@@ -222,7 +222,7 @@ function updatePrice(productId, delta) {
       <Transition name="fade">
         <form 
           v-if="showForm"
-          @submit.prevent="handleSubmit" class="mb-8 space-y-2 text-black">
+          @submit.prevent="handleSubmit" class="mb-8 space-y-2 text-white">
 
           <input v-model="form.name" type="text" placeholder="商品名" class="w-full p-2 rounded bg-gray-100" />
           <textarea v-model="form.description" rows="3" class="w-full p-2 rounded bg-gray-100" placeholder="説明"></textarea>
@@ -289,35 +289,35 @@ function updatePrice(productId, delta) {
         </form>
       </Transition>
       <!-- 商品一覧 -->
-      <div v-for="product in props.products" :key="product.id" class="mb-6 p-4 bg-white text-black shadow rounded">
+      <div v-for="product in props.products" :key="product.id" class="mb-6 p-4 bg-white text-white shadow rounded">
         <div v-if="editingId === product.id">
-          <input v-model="editingForm.name" class="w-full p-1 border rounded mb-1 text-black" />
-          <textarea v-model="editingForm.description" rows="3" class="w-full p-1 border rounded mb-1 text-black"></textarea>
-          <input v-model="editingForm.price" type="number" class="w-full p-1 border rounded mb-1 text-black" placeholder="開始価格 / 上限価格" />
-          <input v-model="editingForm.stock" type="number" class="w-full p-1 border rounded mb-1 text-black" />
+          <input v-model="editingForm.name" class="w-full p-1 border rounded mb-1 text-white" />
+          <textarea v-model="editingForm.description" rows="3" class="w-full p-1 border rounded mb-1 text-white"></textarea>
+          <input v-model="editingForm.price" type="number" class="w-full p-1 border rounded mb-1 text-white" placeholder="開始価格 / 上限価格" />
+          <input v-model="editingForm.stock" type="number" class="w-full p-1 border rounded mb-1 text-white" />
 
-          <select v-model="editingForm.auction_type" class="w-full p-1 border rounded mb-1 text-black">
+          <select v-model="editingForm.auction_type" class="w-full p-1 border rounded mb-1 text-white">
             <option value="none">通常販売</option>
             <option value="auction">オークション</option>
             <option value="reverse">逆オークション</option>
           </select>
 
           <div v-if="editingForm.auction_type !== 'none'">
-            <label class="text-sm text-gray-700 mt-1 text-black">
+            <label class="text-sm text-gray-700 mt-1 text-white">
               最低金額（落札条件）
             </label>
             <input v-model.number="editingForm.min_price" type="number" class="w-full p-1 border rounded mb-1" />
           </div>
 
-          <label class="block text-sm text-gray-700 mt-1 text-black">販売開始日時</label>
+          <label class="block text-sm text-gray-700 mt-1 text-white">販売開始日時</label>
           <input v-model="editingForm.start_at" type="datetime-local" class="w-full p-1 border rounded mb-1" />
 
-          <label class="block text-sm text-gray-700 mt-1 text-black">販売終了日時</label>
+          <label class="block text-sm text-gray-700 mt-1 text-white">販売終了日時</label>
           <input v-model="editingForm.end_at" type="datetime-local" class="w-full p-1 border rounded mb-1" />
 
           <!-- カテゴリー選択 -->
           <label class="text-sm text-gray-700 mt-1">カテゴリー</label>
-          <select v-model="editingForm.category_id" class="w-full p-1 border rounded mb-1 text-black">
+          <select v-model="editingForm.category_id" class="w-full p-1 border rounded mb-1 text-white">
             <option value="">選択してください</option>
             <option v-for="cat in props.categories" :key="cat.id" :value="cat.id">
               {{ cat.name }}
@@ -326,7 +326,7 @@ function updatePrice(productId, delta) {
 
           <!-- 送料の扱い -->
           <label class="text-sm text-gray-700 mt-1">送料</label>
-          <select v-model="editingForm.shipping_type" class="w-full p-1 border rounded mb-1 text-black">
+          <select v-model="editingForm.shipping_type" class="w-full p-1 border rounded mb-1 text-white">
             <option value="included">送料込み</option>
             <option value="cod">着払い</option>
           </select>
@@ -337,7 +337,7 @@ function updatePrice(productId, delta) {
             <input
               v-model.number="editingForm.shipping_fee"
               type="number"
-              class="w-full p-1 border rounded mb-1 text-black"
+              class="w-full p-1 border rounded mb-1 text-white"
             />
           </div>
             <!-- 📺 配信ルーム選択 -->
@@ -345,7 +345,7 @@ function updatePrice(productId, delta) {
             <select
               v-model="editingForm.room_id"
               @change="handleRoomSelectionEdit"
-              class="w-full p-1 border rounded mb-1 text-black"
+              class="w-full p-1 border rounded mb-1 text-white"
             >
               <option value="">選択してください</option>
               <option v-for="room in props.rooms" :key="room.id" :value="room.id">
@@ -363,7 +363,7 @@ function updatePrice(productId, delta) {
 
         <div v-else>
           <div class="text-lg font-semibold">🛒 {{ product.name }}</div>
-          <p class="text-sm whitespace-pre-line text-black mt-1">{{ product.description }}</p>
+          <p class="text-sm whitespace-pre-line text-white mt-1">{{ product.description }}</p>
           <p class="text-sm mt-1">💰 {{ product.price }} 円 / 在庫: {{ product.stock }}</p>
                       <!-- ✅ 値付けボタンエリア（販売担当者だけ） -->
               <div v-if="product.sellers?.some(seller => seller.id === currentUserId)" class="mt-4 flex flex-wrap gap-2">

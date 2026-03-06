@@ -9,3 +9,4 @@ docker-compose.yml
 upstream-api
 public/assets/imgs/neoriabanner01.psd
 public/assets/imgs/splash_base.psd
+public/build/assets

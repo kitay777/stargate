@@ -347,7 +347,6 @@ onBeforeUnmount(() => {
                         <span class="text-xs">ホーム</span>
                     </Link>
                 </button>
-                <!--
                 <button
                     class="flex flex-col items-center text-sm text-white hover:text-blue-500"
                 >
@@ -372,7 +371,6 @@ onBeforeUnmount(() => {
                         <span class="text-xs">SHOP</span>
                     </Link>
                 </button>
-            -->
                 <!-- 作成 -->
                 <button
                     class="flex flex-col items-center text-sm text-white hover:text-blue-500"
